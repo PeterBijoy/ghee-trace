@@ -474,8 +474,7 @@ body{font-family:var(--font-sans);background:var(--surface-0);color:var(--text-p
 
 var GTIN  = '8908016987457';
 var TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkY19zZWNyZXQiOjIzOSwiZXhwaXJhdGlvbiI6InllYXIiLCJleHBpcnlfZGF0ZSI6IjM2NWQiLCJpYXQiOjE3ODI2Mjg3MzgsImV4cCI6MTgxNDE2NDczOH0.RxJONLHsX94oyr1CMnZIBzPtXqEqsKjBcDOt1911WVs';
-var URL   = 'https://corsproxy.io/?https://api.gs1datakart.org/console/retailer/gtin/validate?gtin=' + GTIN;
-
+var URL   = 'https://corsproxy.io/?url=' + encodeURIComponent('https://api.gs1datakart.org/console/retailer/gtin/validate?gtin=' + GTIN);
 function setStatus(state, text) {
   var el = document.getElementById('api-status');
   el.className = 'api-status ' + state;
