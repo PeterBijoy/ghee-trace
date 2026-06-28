@@ -548,7 +548,7 @@ function renderProduct(d){
 // The page will try the API and fall back gracefully
 fetch(API_URL, {
   method:'GET',
-  headers:{'Accept':'application/json','Content-Type':'application/json'},
+  headers:{'Accept':'application/json','Content-Type':' Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkY19zZWNyZXQiOjIzOSwiZXhwaXJhdGlvbiI6InllYXIiLCJleHBpcnlfZGF0ZSI6IjM2NWQiLCJpYXQiOjE3ODI2Mjg3MzgsImV4cCI6MTgxNDE2NDczOH0.RxJONLHsX94oyr1CMnZIBzPtXqEqsKjBcDOt1911WVs'},
   mode:'cors'
 })
 .then(r=>{
