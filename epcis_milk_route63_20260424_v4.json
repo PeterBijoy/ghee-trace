@@ -1,0 +1,209 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.1/epcis-context.jsonld",
+    {
+      "dairy": "https://example.org/dairy/"
+    }
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2026-04-24T09:00:00+05:30",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "ObjectEvent",
+        "eventTime": "2026-04-24T07:10:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "action": "OBSERVE",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-receiving",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "quantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234001004/10/R63-20260424",
+            "quantity": 8570,
+            "uom": "KGM"
+          }
+        ],
+        "sourceList": [
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063013",
+            "dairy:bmcCode": "1042",
+            "dairy:bmcName": "Sangani",
+            "dairy:distanceFromPlant_km": 74,
+            "dairy:arrivalTime": "07:45",
+            "dairy:departureTime": "08:00",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "1416",
+                "dairy:societyName": "Fatehpura",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234114168"
+              },
+              {
+                "dairy:societyCode": "1193",
+                "dairy:societyName": "Ruppura Malumpura",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234111930"
+              }
+            ]
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063022",
+            "dairy:bmcCode": "114",
+            "dairy:bmcName": "Barsani",
+            "dairy:distanceFromPlant_km": 70,
+            "dairy:arrivalTime": "08:10",
+            "dairy:departureTime": "08:25",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "3182",
+                "dairy:societyName": "Laxmipura Barsani",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234131828"
+              }
+            ]
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063031",
+            "dairy:bmcCode": "115",
+            "dairy:bmcName": "Ameser (unit 1)",
+            "dairy:distanceFromPlant_km": 62,
+            "dairy:arrivalTime": "08:40",
+            "dairy:departureTime": "08:55",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "3182",
+                "dairy:societyName": "Laxmipura Barsani",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234131828"
+              },
+              {
+                "dairy:societyCode": "1244",
+                "dairy:societyName": "Reba Ki Dhani",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234112443"
+              }
+            ]
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063040",
+            "dairy:bmcCode": "115",
+            "dairy:bmcName": "Ameser (unit 2)",
+            "dairy:distanceFromPlant_km": 62,
+            "dairy:arrivalTime": "08:55",
+            "dairy:departureTime": "09:10",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "634",
+                "dairy:societyName": "Kana Ji Ka Kheda",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234106345"
+              },
+              {
+                "dairy:societyCode": "1244",
+                "dairy:societyName": "Reba Ki Dhani",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234112443"
+              }
+            ]
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063059",
+            "dairy:bmcCode": "107",
+            "dairy:bmcName": "Kiriyala",
+            "dairy:distanceFromPlant_km": 42,
+            "dairy:arrivalTime": "09:45",
+            "dairy:departureTime": "10:00",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "518",
+                "dairy:societyName": "Kharda",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234105188"
+              }
+            ]
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063068",
+            "dairy:bmcCode": "1136",
+            "dairy:bmcName": "Naya Kharda",
+            "dairy:distanceFromPlant_km": 39,
+            "dairy:arrivalTime": "10:05",
+            "dairy:departureTime": "10:20"
+          },
+          {
+            "type": "location",
+            "source": "https://id.gs1.org/414/8901234063077",
+            "dairy:bmcCode": "290",
+            "dairy:bmcName": "Ramapuriya",
+            "dairy:distanceFromPlant_km": 36,
+            "dairy:arrivalTime": "10:25",
+            "dairy:departureTime": "10:40",
+            "dairy:linkedSocieties": [
+              {
+                "dairy:societyCode": "3132",
+                "dairy:societyName": "Patiya Kheda",
+                "dairy:societyGLN": "https://id.gs1.org/414/8901234131323"
+              }
+            ]
+          }
+        ],
+        "sensorElementList": [
+          {
+            "sensorMetadata": {
+              "dataProcessingMethod": "https://example.org/dairy/methods/milkQualityAnalysis"
+            },
+            "sensorReport": [
+              {
+                "type": "https://gs1.org/voc/MassPerUnitVolume",
+                "component": "https://example.org/dairy/sensor#FatPercent",
+                "value": 5.52,
+                "uom": "P1",
+                "deviceID": "https://id.gs1.org/8004/89012340000101",
+                "deviceMetadata": "https://id.gs1.org/8004/89012340000101"
+              },
+              {
+                "type": "https://gs1.org/voc/MassPerUnitVolume",
+                "component": "https://example.org/dairy/sensor#SNFPercent",
+                "value": 8.54,
+                "uom": "P1",
+                "deviceID": "https://id.gs1.org/8004/89012340000101",
+                "deviceMetadata": "https://id.gs1.org/8004/89012340000101"
+              },
+              {
+                "type": "https://gs1.org/voc/MassPerUnitVolume",
+                "component": "https://example.org/dairy/sensor#BMCFatPercent",
+                "value": 5.67,
+                "uom": "P1",
+                "deviceID": "https://id.gs1.org/8004/89012340000102",
+                "deviceMetadata": "https://id.gs1.org/8004/89012340000102"
+              },
+              {
+                "type": "https://gs1.org/voc/MassPerUnitVolume",
+                "component": "https://example.org/dairy/sensor#BMCSNFPercent",
+                "value": 8.55,
+                "uom": "P1",
+                "deviceID": "https://id.gs1.org/8004/89012340000102",
+                "deviceMetadata": "https://id.gs1.org/8004/89012340000102"
+              }
+            ]
+          }
+        ],
+        "dairy:routeNo": "63",
+        "dairy:routeGLN": "https://id.gs1.org/414/8901234000634",
+        "dairy:collectionDate": "2026-04-24",
+        "dairy:milkType": "Cow Milk",
+        "dairy:fatPercent": 5.52,
+        "dairy:snfPercent": 8.54,
+        "dairy:bmcFatPercent": 5.67,
+        "dairy:bmcSnfPercent": 8.55,
+        "dairy:lotNumber": "R63-20260424",
+        "eventID": "ni:///sha-256;1744d8013d52e42fb9de8c57f22992c19f938c4b6bf3ee8823503ea9eac2eb22?ver=CBV2.0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPCIS Traceability — Cow Ghee · Bhilwara Dairy · GHE-20260501</title>
+<meta name="description" content="GS1 EPCIS 2.0.1 traceability trace for cow ghee lot GHE-20260501 from Bhilwara Jila Dugdh Utpadak Sahkari Sangh Ltd. Traces milk collection on 24 April 2026 across routes 61, 63 and 70 through cream and butter to ghee production in May 2026.">
+<style>
+/* ── design tokens (replaces Claude CSS vars) ── */
+:root {
+  --text-primary:     #1a1a18;
+  --text-secondary:   #4a4a46;
+  --text-muted:       #898781;
+  --text-accent:      #185FA5;
+  --border:           #e1e0d9;
+  --border-strong:    #c3c2b7;
+  --surface-0:        #fafaf8;
+  --surface-1:        #f5f4f0;
+  --surface-2:        #eeecea;
+  --font-mono:        'Menlo','Consolas','Liberation Mono',monospace;
+  --font-sans:        'Segoe UI',system-ui,-apple-system,sans-serif;
+  --radius:           8px;
+}
+
+/* ── reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; }
+body {
+  font-family: var(--font-sans);
+  background: var(--surface-0);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ── page chrome ── */
+.page-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.page-header-logo {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: #002C6C; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+}
+.page-header-logo svg { width: 22px; height: 22px; fill: #fff; }
+.page-header-title { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.page-header-sub   { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+.page-header-badge {
+  margin-left: auto; font-size: 10px; font-weight: 500;
+  border: 1px solid #d0cfc8; border-radius: 12px;
+  padding: 3px 10px; color: var(--text-muted);
+}
+
+.page-body { max-width: 960px; margin: 0 auto; padding: 24px 20px 48px; }
+
+/* ── component styles (resolved from Claude vars) ── */
+.wrap { font-size: 13px; color: var(--text-primary); }
+
+.hdr {
+  background: var(--surface-1); border: 0.5px solid var(--border);
+  border-radius: 10px; padding: 12px 16px; margin-bottom: 16px;
+  display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: flex-start;
+}
+.hitem { display: flex; flex-direction: column; gap: 1px; }
+.hlbl  { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+.hval  { font-size: 12px; font-weight: 500; color: var(--text-primary); font-family: var(--font-mono); }
+.hval.plain { font-family: var(--font-sans); }
+
+.date-pill  { display: inline-flex; align-items: center; gap: 6px; border-radius: 20px; padding: 4px 12px; font-size: 11px; font-weight: 500; border: 0.5px solid; }
+.dp-collect { background: #e1f5ee; border-color: #5DCAA5; color: #085041; }
+.dp-prod    { background: #faeeda; border-color: #c99030; color: #633806; }
+.date-row   { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.date-arrow { font-size: 12px; color: var(--text-muted); }
+
+.stage { border-radius: 10px; border: 0.5px solid var(--border-strong); overflow: hidden; }
+.shd   { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-bottom: 0.5px solid var(--border); }
+.badge { font-size: 10px; font-weight: 500; border-radius: 12px; padding: 2px 9px; white-space: nowrap; flex-shrink: 0; }
+.sname { font-size: 13px; font-weight: 500; flex: 1; }
+.stime { font-size: 10px; color: var(--text-muted); white-space: nowrap; font-family: var(--font-mono); }
+.sbd   { padding: 11px 14px; }
+
+.io    { display: flex; align-items: flex-start; gap: 4px; }
+.ios   { flex: 1; min-width: 0; }
+.iolbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+.ioprod { font-size: 13px; font-weight: 500; }
+.ioqty  { font-size: 11px; color: var(--text-secondary); margin-top: 1px; }
+.iodl   { font-size: 10px; font-family: var(--font-mono); color: var(--text-muted); margin-top: 2px; word-break: break-all; line-height: 1.4; }
+.ioarr  { width: 38px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--text-muted); padding-top: 10px; }
+
+.ys { display: flex; align-items: center; gap: 8px; margin-top: 9px; padding-top: 9px; border-top: 0.5px solid var(--border); }
+.yp { font-size: 11px; font-weight: 500; border-radius: 20px; padding: 2px 10px; }
+.yn { font-size: 11px; color: var(--text-secondary); }
+
+.dtag   { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; border-radius: 4px; padding: 2px 7px; margin-top: 8px; border: 0.5px solid; }
+.dtag-c { background: #e1f5ee; border-color: #5DCAA5; color: #085041; }
+.dtag-p { background: #faeeda; border-color: #c99030; color: #633806; }
+
+.conn { display: flex; align-items: center; height: 26px; padding: 0 18px; }
+.cl   { flex: 1; height: 0.5px; background: var(--border-strong); }
+.clbl { font-size: 10px; color: var(--text-muted); padding: 0 10px; white-space: nowrap; display: flex; align-items: center; gap: 4px; }
+.cdot { width: 5px; height: 5px; border-radius: 50%; background: var(--border-strong); flex-shrink: 0; }
+
+.mstats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+.ms     { display: flex; flex-direction: column; gap: 1px; }
+.msl    { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.msv    { font-size: 12px; font-weight: 500; }
+
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+@media (max-width: 640px) { .routes { grid-template-columns: 1fr; } }
+
+.rc    { border-radius: 8px; border: 0.5px solid var(--border); padding: 10px 11px; background: var(--surface-2); }
+.rchd  { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.rn    { font-size: 12px; font-weight: 500; }
+.rchips { font-size: 10px; color: var(--text-muted); text-align: right; line-height: 1.6; }
+.rq    { font-size: 11px; color: var(--text-secondary); }
+.rdl   { font-size: 10px; font-family: var(--font-mono); color: var(--text-muted); margin-top: 3px; word-break: break-all; line-height: 1.4; }
+.reb   { font-size: 11px; color: var(--text-accent); background: none; border: none; cursor: pointer; padding: 4px 0 0; display: flex; align-items: center; gap: 3px; }
+.rd    { display: none; margin-top: 8px; padding-top: 8px; border-top: 0.5px solid var(--border); }
+.rd.open { display: block; }
+
+.br { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 5px; }
+.bd { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+.bn { font-size: 11px; font-weight: 500; color: var(--text-primary); }
+.bg { font-size: 9px; font-family: var(--font-mono); color: var(--text-muted); margin-top: 1px; }
+.si { font-size: 10px; color: var(--text-secondary); line-height: 1.7; padding-left: 11px; }
+.sc { font-family: var(--font-mono); color: var(--text-muted); margin-right: 3px; }
+
+.orig { margin-top: 10px; background: var(--surface-0); border: 0.5px solid var(--border); border-radius: 6px; padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px 14px; align-items: center; font-size: 11px; }
+
+/* stage colour tokens */
+.ghee-s { background: #faeeda; border-color: #c99030; }
+.ghee-b { background: #faeeda; color: #633806; }
+.ghee-p { color: #854F0B; }
+.ghee-y { background: #faeeda; color: #633806; }
+.but-s  { background: #e6f1fb; border-color: #85B7EB; }
+.but-b  { background: #e6f1fb; color: #0C447C; }
+.but-p  { color: #185FA5; }
+.but-y  { background: #e6f1fb; color: #0C447C; }
+.crm-s  { background: #e1f5ee; border-color: #5DCAA5; }
+.crm-b  { background: #e1f5ee; color: #085041; }
+.crm-p  { color: #0F6E56; }
+.crm-y  { background: #e1f5ee; color: #085041; }
+.mlk-s  { background: var(--surface-2); border-color: var(--border-strong); }
+.mlk-b  { background: var(--surface-1); color: var(--text-secondary); }
+
+/* page footer */
+.page-footer {
+  border-top: 1px solid var(--border); padding: 16px 24px;
+  font-size: 11px; color: var(--text-muted);
+  display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center;
+  background: #fff; margin-top: 32px;
+}
+.page-footer a { color: var(--text-accent); text-decoration: none; }
+.page-footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-header-logo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+  </div>
+  <div>
+    <div class="page-header-title">EPCIS Traceability — Cow Ghee</div>
+    <div class="page-header-sub">Bhilwara Jila Dugdh Utpadak Sahkari Sangh Ltd · GHE-20260501</div>
+  </div>
+  <span class="page-header-badge">EPCIS 2.0.1 · GS1 DL 1.2</span>
+</header>
+
+<main class="page-body">
+<div class="wrap">
+
+<!-- Header -->
+<div class="hdr">
+  <div class="hitem"><div class="hlbl">Trace query</div><div class="hval plain">Cow Ghee · lot GHE-20260501</div></div>
+  <div class="hitem"><div class="hlbl">epcClass (DL URI)</div><div class="hval">id.gs1.org/01/08901234004005/10/GHE-20260501</div></div>
+  <div class="hitem"><div class="hlbl">GTIN-14</div><div class="hval">08901234004005</div></div>
+  <div class="hitem"><div class="hlbl">Production date</div><div class="hval plain">01 May 2026</div></div>
+  <div class="hitem"><div class="hlbl">Milk collection date</div><div class="hval plain" style="color:#085041">24 April 2026</div></div>
+  <div class="hitem"><div class="hlbl">Schema</div><div class="hval plain">EPCIS 2.0.1 · GS1 DL 1.2 · NI eventIDs</div></div>
+</div>
+
+<!-- Date banner -->
+<div class="date-row">
+  <span class="date-pill dp-collect">🥛 Milk collected — 24 Apr 2026</span>
+  <span class="date-arrow">──────────────────────────────────────────→</span>
+  <span class="date-pill dp-prod">🧈 Processed &amp; packed — May 2026</span>
+</div>
+
+<!-- STEP 1: GHEE -->
+<div class="stage ghee-s">
+  <div class="shd">
+    <span class="badge ghee-b">TransformationEvent</span>
+    <span class="sname">Ghee production — clarification</span>
+    <span class="stime">2026-05-01T14:00:00+05:30</span>
+  </div>
+  <div class="sbd">
+    <div class="io">
+      <div class="ios">
+        <div class="iolbl">Input</div>
+        <div class="ioprod but-p">White butter</div>
+        <div class="ioqty">1,500 kg · KGM</div>
+        <div class="iodl">id.gs1.org/01/08901234003008/10/BTR-20260501</div>
+      </div>
+      <div class="ioarr">→</div>
+      <div class="ios">
+        <div class="iolbl">Output</div>
+        <div class="ioprod ghee-p">Cow ghee</div>
+        <div class="ioqty">1,220 kg · KGM</div>
+        <div class="iodl">id.gs1.org/01/08901234004005/10/GHE-20260501</div>
+      </div>
+    </div>
+    <div class="ys">
+      <span class="yp ghee-y">81.33% yield</span>
+      <span class="yn">Residue 280 kg · readPoint: id.gs1.org/414/8901234000014</span>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+      <span class="dtag dtag-p">clarificationDate: 2026-05-01</span>
+      <span class="dtag dtag-c">milkCollectionDate: 2026-04-24</span>
+    </div>
+  </div>
+</div>
+
+<div class="conn"><div class="cl"></div><div class="clbl"><div class="cdot"></div>BTR-20260501 input traced to</div><div class="cl"></div></div>
+
+<!-- STEP 2: BUTTER -->
+<div class="stage but-s">
+  <div class="shd">
+    <span class="badge but-b">TransformationEvent</span>
+    <span class="sname">Butter production — churning</span>
+    <span class="stime">2026-05-01T12:00:00+05:30</span>
+  </div>
+  <div class="sbd">
+    <div class="io">
+      <div class="ios">
+        <div class="iolbl">Input</div>
+        <div class="ioprod crm-p">Cream</div>
+        <div class="ioqty">3,093.75 kg · KGM</div>
+        <div class="iodl">id.gs1.org/01/08901234002001/10/CRM-20260501</div>
+      </div>
+      <div class="ioarr">→</div>
+      <div class="ios">
+        <div class="iolbl">Output</div>
+        <div class="ioprod but-p">White butter</div>
+        <div class="ioqty">1,500 kg · KGM</div>
+        <div class="iodl">id.gs1.org/01/08901234003008/10/BTR-20260501</div>
+      </div>
+    </div>
+    <div class="ys">
+      <span class="yp but-y">48.48% yield</span>
+      <span class="yn">Buttermilk 1,593.75 kg · readPoint: id.gs1.org/414/8901234000014</span>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+      <span class="dtag dtag-p">churningDate: 2026-05-01</span>
+      <span class="dtag dtag-c">milkCollectionDate: 2026-04-24</span>
+    </div>
+  </div>
+</div>
+
+<div class="conn"><div class="cl"></div><div class="clbl"><div class="cdot"></div>CRM-20260501 input traced to</div><div class="cl"></div></div>
+
+<!-- STEP 3: CREAM -->
+<div class="stage crm-s">
+  <div class="shd">
+    <span class="badge crm-b">TransformationEvent</span>
+    <span class="sname">Cream production — milk separation</span>
+    <span class="stime">2026-05-01T10:00:00+05:30</span>
+  </div>
+  <div class="sbd">
+    <div class="io">
+      <div class="ios">
+        <div class="iolbl">Inputs — 3 milk lots (collected 24-Apr-2026)</div>
+        <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px">
+          <div>
+            <div class="ioprod" style="font-size:12px">R61-20260424</div>
+            <div class="ioqty">10,006.3 kg · id.gs1.org/01/08901234001004/10/R61-20260424</div>
+          </div>
+          <div>
+            <div class="ioprod" style="font-size:12px">R63-20260424</div>
+            <div class="ioqty">9,142.3 kg · id.gs1.org/01/08901234001004/10/R63-20260424</div>
+          </div>
+          <div>
+            <div class="ioprod" style="font-size:12px">R70-20260424</div>
+            <div class="ioqty">10,315.7 kg · id.gs1.org/01/08901234001004/10/R70-20260424</div>
+          </div>
+        </div>
+      </div>
+      <div class="ioarr" style="padding-top:22px">→</div>
+      <div class="ios">
+        <div class="iolbl">Output</div>
+        <div class="ioprod crm-p">Cream</div>
+        <div class="ioqty">3,093.75 kg · KGM</div>
+        <div class="iodl">id.gs1.org/01/08901234002001/10/CRM-20260501</div>
+      </div>
+    </div>
+    <div class="ys">
+      <span class="yp crm-y">10.5% yield</span>
+      <span class="yn">Total milk 29,464.3 kg · Skim milk 26,370.55 kg</span>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+      <span class="dtag dtag-p">separationDate: 2026-05-01</span>
+      <span class="dtag dtag-c">milkCollectionDate: 2026-04-24</span>
+    </div>
+  </div>
+</div>
+
+<div class="conn"><div class="cl"></div><div class="clbl"><div class="cdot"></div>R61/R63/R70-20260424 milk lots traced to ObjectEvents</div><div class="cl"></div></div>
+
+<!-- STEP 4: MILK RECEIVING -->
+<div class="stage mlk-s">
+  <div class="shd">
+    <span class="badge mlk-b">ObjectEvent × 3 routes</span>
+    <span class="sname">Raw cow milk receiving</span>
+    <span class="stime" style="color:#085041;font-weight:500">24 Apr 2026 · 06:30–08:05 IST</span>
+  </div>
+  <div class="sbd">
+    <div class="mstats">
+      <div class="ms"><div class="msl">Collection date</div><div class="msv" style="color:#085041">24 April 2026</div></div>
+      <div class="ms"><div class="msl">Total milk</div><div class="msv">27,620 kg</div></div>
+      <div class="ms"><div class="msl">GTIN-14</div><div class="msv" style="font-family:var(--font-mono);font-size:11px">08901234001004</div></div>
+      <div class="ms"><div class="msl">bizStep</div><div class="msv" style="font-size:11px">BizStep-receiving</div></div>
+      <div class="ms"><div class="msl">readPoint</div><div class="msv" style="font-family:var(--font-mono);font-size:10px">id.gs1.org/414/8901234000014</div></div>
+      <div class="ms"><div class="msl">Milk type</div><div class="msv">Cow milk</div></div>
+    </div>
+
+    <div class="routes">
+
+      <!-- Route 61 -->
+      <div class="rc" style="border-color:#5a9fd4">
+        <div class="rchd">
+          <div>
+            <div class="rn" style="color:#0c3d6b">Route 61 / 3</div>
+            <div class="rq">9,380 kg · Fat 4.64% · SNF 8.55</div>
+          </div>
+          <div class="rchips">11 BMCs<br>14 societies</div>
+        </div>
+        <div class="rdl">id.gs1.org/01/08901234001004/10/<strong>R61-20260424</strong></div>
+        <button class="reb" onclick="tog('r61',this)">▾ Show BMCs</button>
+        <div id="r61" class="rd">
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">55 · Rajyas</div><div class="bg">id.gs1.org/414/8901234061015</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">1079 · Kanechan Khurd</div><div class="bg">id.gs1.org/414/8901234061024</div><div class="si"><span class="sc">3513 </span>Dhokalia Balaji</div><div class="si"><span class="sc">408 </span>Sardarpura</div><div class="si"><span class="sc">1133 </span>Narayanpura</div><div class="si"><span class="sc">3224 </span>Laxminath</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">259 · Araniya Ghoda</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">3076 · Bhairukheda</div><div class="si"><span class="sc">3155 </span>Bhilon Ka Kheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">3154 · Ganeshpura</div><div class="si"><span class="sc">1180 </span>Khelass</div><div class="si"><span class="sc">514 </span>Shri Nagar</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">283 · Rupura</div><div class="si"><span class="sc">1449 </span>Bhagwanpura</div><div class="si"><span class="sc">3310 </span>Naya Talab</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">1135 · Surajpura</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">1323 · Khan Ka Kheda</div><div class="si"><span class="sc">3520 </span>Biliya</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">61 · Tahnal</div><div class="si"><span class="sc">1453 </span>Gopalpura</div><div class="si"><span class="sc">1254 </span>Shambhupura</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">639 · Daulatpura</div><div class="si"><span class="sc">3034 </span>Gopalpur (Bastha)</div><div class="si"><span class="sc">1148 </span>Sewni</div></div></div>
+          <div class="br"><span class="bd" style="background:#5a9fd4"></span><div><div class="bn">285 · Raghurajpura</div></div></div>
+        </div>
+      </div>
+
+      <!-- Route 63 -->
+      <div class="rc" style="border-color:#d87050">
+        <div class="rchd">
+          <div>
+            <div class="rn" style="color:#6b2010">Route 63 / 5</div>
+            <div class="rq">8,570 kg · Fat 5.52% · SNF 8.54</div>
+          </div>
+          <div class="rchips">7 BMCs<br>9 societies</div>
+        </div>
+        <div class="rdl">id.gs1.org/01/08901234001004/10/<strong>R63-20260424</strong></div>
+        <button class="reb" onclick="tog('r63',this)">▾ Show BMCs</button>
+        <div id="r63" class="rd">
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">1042 · Sangani</div><div class="si"><span class="sc">1416 </span>Fatehpura</div><div class="si"><span class="sc">1193 </span>Ruppura Malumpura</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">114 · Barsani</div><div class="si"><span class="sc">3182 </span>Laxmipura Barsani</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">115 · Ameser (unit 1)</div><div class="si"><span class="sc">3182 </span>Laxmipura Barsani</div><div class="si"><span class="sc">1244 </span>Reba Ki Dhani</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">115 · Ameser (unit 2)</div><div class="si"><span class="sc">634 </span>Kana Ji Ka Kheda</div><div class="si"><span class="sc">1244 </span>Reba Ki Dhani</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">107 · Kiriyala</div><div class="si"><span class="sc">518 </span>Kharda</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">1136 · Naya Kharda</div></div></div>
+          <div class="br"><span class="bd" style="background:#d87050"></span><div><div class="bn">290 · Ramapuriya</div><div class="si"><span class="sc">3132 </span>Patiya Kheda</div></div></div>
+        </div>
+      </div>
+
+      <!-- Route 70 -->
+      <div class="rc" style="border-color:#c99030">
+        <div class="rchd">
+          <div>
+            <div class="rn" style="color:#5a3500">Route 70 / 3</div>
+            <div class="rq">9,670 kg · Fat 4.18% · SNF 8.42</div>
+          </div>
+          <div class="rchips">11 BMCs<br>17 societies</div>
+        </div>
+        <div class="rdl">id.gs1.org/01/08901234001004/10/<strong>R70-20260424</strong></div>
+        <button class="reb" onclick="tog('r70',this)">▾ Show BMCs</button>
+        <div id="r70" class="rd">
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">3090 · Bachhkheda Balaji 1</div><div class="si"><span class="sc">1017 </span>Aatoli</div><div class="si"><span class="sc">1109 </span>Devpuri</div><div class="si"><span class="sc">3444 </span>Aatoli Balaji B</div><div class="si"><span class="sc">1013 </span>Mal Kheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">1049 · Baseda</div><div class="si"><span class="sc">3028 </span>Pipalaaj</div><div class="si"><span class="sc">3033 </span>Raghunathpura</div><div class="si"><span class="sc">1203 </span>Kajodiya</div><div class="si"><span class="sc">63 </span>Bach Kheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">3090 · Bachhkheda Balaji 3</div><div class="si"><span class="sc">1017 </span>Aatoli</div><div class="si"><span class="sc">1109 </span>Devpuri</div><div class="si"><span class="sc">3444 </span>Aatoli Balaji B</div><div class="si"><span class="sc">1013 </span>Mal Kheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">429 · Mali Kheda</div><div class="si"><span class="sc">72 </span>Aamali Bared</div><div class="si"><span class="sc">3498 </span>Daulatpura (Balapura)</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">1068 · Kashipura</div><div class="si"><span class="sc">3507 </span>Bhirukheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">62 · Rahad</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">631 · Raynagar</div><div class="si"><span class="sc">3027 </span>Bhagwanpura</div><div class="si"><span class="sc">3420 </span>Naya Gaon Topa</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">549 · Mataji Ka Kheda</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">575 · Shahpura</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">68 · Dhikola</div><div class="si"><span class="sc">1214 </span>Noogaon</div><div class="si"><span class="sc">1029 </span>Badesar</div><div class="si"><span class="sc">70 </span>Tasvariya Khurd</div></div></div>
+          <div class="br"><span class="bd" style="background:#c99030"></span><div><div class="bn">67 · Phuliya Khurd</div></div></div>
+        </div>
+      </div>
+
+    </div><!-- .routes -->
+
+    <div class="orig">
+      <span style="font-weight:500">Bhilwara Jila Dugdh Utpadak Sahkari Sangh Ltd</span>
+      <span style="color:#c3c2b7">·</span><span style="color:#4a4a46">29 BMC stops</span>
+      <span style="color:#c3c2b7">·</span><span style="color:#4a4a46">27 village societies</span>
+      <span style="color:#c3c2b7">·</span><span style="color:#4a4a46">Cow milk · 24 Apr 2026</span>
+      <span style="color:#c3c2b7">·</span><span style="color:#4a4a46">EPCIS 2.0.1 · GS1 DL 1.2 · NI eventIDs</span>
+    </div>
+  </div>
+</div>
+
+</div><!-- .wrap -->
+</main>
+
+<footer class="page-footer">
+  <span>Bhilwara Jila Dugdh Utpadak Sahkari Sangh Ltd</span>
+  <span>·</span>
+  <span>GS1 EPCIS 2.0.1 · GS1 Digital Link 1.2</span>
+  <span>·</span>
+  <span>Lot GHE-20260501 · Milk collected 24 Apr 2026</span>
+  <span style="margin-left:auto">
+    <a href="https://ref.gs1.org/standards/epcis/" target="_blank" rel="noopener">GS1 EPCIS Standard ↗</a>
+  </span>
+</footer>
+
+<script>
+function tog(id, btn) {
+  const el = document.getElementById(id);
+  const open = el.classList.toggle('open');
+  btn.textContent = (open ? '▴ Hide' : '▾ Show') + ' BMCs';
+}
+</script>
+</body>
+</html>

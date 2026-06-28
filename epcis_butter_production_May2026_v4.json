@@ -1,0 +1,411 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.1/epcis-context.jsonld",
+    {
+      "dairy": "https://example.org/dairy/"
+    }
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2026-05-01T12:30:00+05:30",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-01T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260501",
+            "quantity": 3093.75,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260501",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-01",
+        "dairy:inputCream_kg": 3093.75,
+        "dairy:outputWhiteButter_kg": 1500,
+        "dairy:outputButtermilk_kg": 1593.75,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;681662304a657ab297a61fc9dc82bd4f3a29052df433d1bbd233e8d9a8a50986?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-02T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260502",
+            "quantity": 3300.0,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260502",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-02",
+        "dairy:inputCream_kg": 3300.0,
+        "dairy:outputWhiteButter_kg": 1600,
+        "dairy:outputButtermilk_kg": 1700.0,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;29352fa5387cf2c2c5e446097e211147d19549d033c725734aeca1ba41e51594?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-03T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260503",
+            "quantity": 3093.75,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260503",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-03",
+        "dairy:inputCream_kg": 3093.75,
+        "dairy:outputWhiteButter_kg": 1500,
+        "dairy:outputButtermilk_kg": 1593.75,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;6238b2315bddb0924477dc93ce82c68a2b7fb5803918dac8b003420cfd222cb8?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-04T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260504",
+            "quantity": 2681.25,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260504",
+            "quantity": 1300,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-04",
+        "dairy:inputCream_kg": 2681.25,
+        "dairy:outputWhiteButter_kg": 1300,
+        "dairy:outputButtermilk_kg": 1381.25,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;4f246ea57916718326688d7db31a76808c0ef05a6fd7284c4df098623dc056a2?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-05T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260505",
+            "quantity": 2475.0,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260505",
+            "quantity": 1200,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-05",
+        "dairy:inputCream_kg": 2475.0,
+        "dairy:outputWhiteButter_kg": 1200,
+        "dairy:outputButtermilk_kg": 1275.0,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;fe0b6c8fdf9712c89973117482ef9ba8b008f510777b3604b0f71250b2f20815?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-06T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260506",
+            "quantity": 2887.5,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260506",
+            "quantity": 1400,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-06",
+        "dairy:inputCream_kg": 2887.5,
+        "dairy:outputWhiteButter_kg": 1400,
+        "dairy:outputButtermilk_kg": 1487.5,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;2025a605f2999c16cb6e01428ebffe604b59a1d7c7ac4fe25480faf09509c170?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-07T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260507",
+            "quantity": 3093.75,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260507",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-07",
+        "dairy:inputCream_kg": 3093.75,
+        "dairy:outputWhiteButter_kg": 1500,
+        "dairy:outputButtermilk_kg": 1593.75,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;771ce78e45e65ae1861e99ae4c5c7c50cb80d115cbca2e9fa4c1229e4d127f40?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-08T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260508",
+            "quantity": 3300.0,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260508",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-08",
+        "dairy:inputCream_kg": 3300.0,
+        "dairy:outputWhiteButter_kg": 1600,
+        "dairy:outputButtermilk_kg": 1700.0,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;ebbacd02ff5ce20bed734304777d6ce8e4f630c3f51f8e1f867097e5d2e91260?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-09T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260509",
+            "quantity": 3506.25,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260509",
+            "quantity": 1700,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-09",
+        "dairy:inputCream_kg": 3506.25,
+        "dairy:outputWhiteButter_kg": 1700,
+        "dairy:outputButtermilk_kg": 1806.25,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;458766bdf64563797b2218830ea70c94105aeb3aa399f6fa736aa61366de7d38?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-10T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260510",
+            "quantity": 3300.0,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260510",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-10",
+        "dairy:inputCream_kg": 3300.0,
+        "dairy:outputWhiteButter_kg": 1600,
+        "dairy:outputButtermilk_kg": 1700.0,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;67d19590364015ac959b357f45f4447e6064d67ca7135b675db293db8994a88b?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-11T12:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8901234000014"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234002001/10/CRM-20260511",
+            "quantity": 2103.75,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08901234003008/10/BTR-20260511",
+            "quantity": 1020,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "Churning",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:churningDate": "2026-05-11",
+        "dairy:inputCream_kg": 2103.75,
+        "dairy:outputWhiteButter_kg": 1020,
+        "dairy:outputButtermilk_kg": 1083.75,
+        "dairy:butterYieldFromCreamPct": 48.48,
+        "dairy:milkType": "Cow Milk",
+        "eventID": "ni:///sha-256;bc0ba3e1bed5aa6de3f4fdc8fbfbfe7e8f70bef96af2533b0d26c13e7176bcfa?ver=CBV2.0"
+      }
+    ]
+  }
+}
