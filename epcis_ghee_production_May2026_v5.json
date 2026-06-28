@@ -1,0 +1,422 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.1/epcis-context.jsonld",
+    {
+      "dairy": "https://example.org/dairy/"
+    }
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2026-05-01T14:30:00+05:30",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-01T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260501",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260501",
+            "quantity": 1220,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-01",
+        "dairy:inputWhiteButter_kg": 1500,
+        "dairy:outputCowGhee_kg": 1220,
+        "dairy:residue_kg": 280,
+        "dairy:gheeYieldFromButterPct": 81.33,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;da05ad5781897b39969d04c6501979a23981e4e00e5e6d588a06a706d2c627f9?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-02T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260502",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260502",
+            "quantity": 1300,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-02",
+        "dairy:inputWhiteButter_kg": 1600,
+        "dairy:outputCowGhee_kg": 1300,
+        "dairy:residue_kg": 300,
+        "dairy:gheeYieldFromButterPct": 81.25,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;ede4d43a499832116cbb227cb00b637519db8cbe3e087baccf7fb8ddc9b7f94e?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-03T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260503",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260503",
+            "quantity": 1200,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-03",
+        "dairy:inputWhiteButter_kg": 1500,
+        "dairy:outputCowGhee_kg": 1200,
+        "dairy:residue_kg": 300,
+        "dairy:gheeYieldFromButterPct": 80.0,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;b355dd8f6d474c7acb2b55a601987bca5f4147fc6f6451f11c3b6a1087a91819?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-04T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260504",
+            "quantity": 1300,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260504",
+            "quantity": 1060,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-04",
+        "dairy:inputWhiteButter_kg": 1300,
+        "dairy:outputCowGhee_kg": 1060,
+        "dairy:residue_kg": 240,
+        "dairy:gheeYieldFromButterPct": 81.54,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;0c74f80320df417b25798f6eee2b67463f0fb0063828ebddf0127966b3245cb7?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-05T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260505",
+            "quantity": 1200,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260505",
+            "quantity": 980,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-05",
+        "dairy:inputWhiteButter_kg": 1200,
+        "dairy:outputCowGhee_kg": 980,
+        "dairy:residue_kg": 220,
+        "dairy:gheeYieldFromButterPct": 81.67,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;98ad27b916822c8891faaaf006e8510376a915a6cb9f99f7fdd03b53f2351ac7?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-06T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260506",
+            "quantity": 1400,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260506",
+            "quantity": 1140,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-06",
+        "dairy:inputWhiteButter_kg": 1400,
+        "dairy:outputCowGhee_kg": 1140,
+        "dairy:residue_kg": 260,
+        "dairy:gheeYieldFromButterPct": 81.43,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;4297aaa47a33cc45efbbef34beb2d0c58877082b14fa15aa22e56ad7280b149f?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-07T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260507",
+            "quantity": 1500,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260507",
+            "quantity": 1200,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-07",
+        "dairy:inputWhiteButter_kg": 1500,
+        "dairy:outputCowGhee_kg": 1200,
+        "dairy:residue_kg": 300,
+        "dairy:gheeYieldFromButterPct": 80.0,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;40923bb46a7fe4d1ffa24739766dfde082ce001a2d8eaddfeca8f7047b65bd5d?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-08T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260508",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260508",
+            "quantity": 1300,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-08",
+        "dairy:inputWhiteButter_kg": 1600,
+        "dairy:outputCowGhee_kg": 1300,
+        "dairy:residue_kg": 300,
+        "dairy:gheeYieldFromButterPct": 81.25,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;4fb8f30de480203968887193ea91fe9f5073593ffec51cb8ba344bbf29d0f484?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-09T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260509",
+            "quantity": 1700,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260509",
+            "quantity": 1360,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-09",
+        "dairy:inputWhiteButter_kg": 1700,
+        "dairy:outputCowGhee_kg": 1360,
+        "dairy:residue_kg": 340,
+        "dairy:gheeYieldFromButterPct": 80.0,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;e51b7f8cc5820d3075b908691a566eca91d111de6e276f96a2c8a1508d35dd2d?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-10T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260510",
+            "quantity": 1600,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260510",
+            "quantity": 1280,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-10",
+        "dairy:inputWhiteButter_kg": 1600,
+        "dairy:outputCowGhee_kg": 1280,
+        "dairy:residue_kg": 320,
+        "dairy:gheeYieldFromButterPct": 80.0,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;5c4dca0bd29a65f5b2569d872cf9363bdf770a851e9ea7a4875a01ff0c177812?ver=CBV2.0"
+      },
+      {
+        "type": "TransformationEvent",
+        "eventTime": "2026-05-11T14:00:00+05:30",
+        "eventTimeZoneOffset": "+05:30",
+        "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
+        "disposition": "https://ref.gs1.org/cbv/Disp-active",
+        "readPoint": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "bizLocation": {
+          "id": "https://id.gs1.org/414/8908016987006"
+        },
+        "inputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987037/10/BTR-20260511",
+            "quantity": 1020,
+            "uom": "KGM"
+          }
+        ],
+        "outputQuantityList": [
+          {
+            "epcClass": "https://id.gs1.org/01/08908016987457/10/GHE-20260511",
+            "quantity": 830,
+            "uom": "KGM"
+          }
+        ],
+        "dairy:processStep": "GheeClarification",
+        "dairy:milkCollectionDate": "2026-04-24",
+        "dairy:clarificationDate": "2026-05-11",
+        "dairy:inputWhiteButter_kg": 1020,
+        "dairy:outputCowGhee_kg": 830,
+        "dairy:residue_kg": 190,
+        "dairy:gheeYieldFromButterPct": 81.37,
+        "dairy:milkType": "Cow Milk",
+        "dairy:sourceDocument": "Cow Ghee Production Details May 2026",
+        "eventID": "ni:///sha-256;bc6d548479ac9ac6748bc0f3139842e57ce45de009c0866f6996872710f5f98d?ver=CBV2.0"
+      }
+    ]
+  }
+}
