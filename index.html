@@ -472,9 +472,8 @@ body{font-family:var(--font-sans);background:var(--surface-0);color:var(--text-p
   }
 })();
 
-var GTIN  = '8908016987457';
-var TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkY19zZWNyZXQiOjIzOSwiZXhwaXJhdGlvbiI6InllYXIiLCJleHBpcnlfZGF0ZSI6IjM2NWQiLCJpYXQiOjE3ODI2Mjg3MzgsImV4cCI6MTgxNDE2NDczOH0.RxJONLHsX94oyr1CMnZIBzPtXqEqsKjBcDOt1911WVs';
-var URL   = 'https://corsproxy.io/?url=https%3A%2F%2Fapi.gs1datakart.org%2Fconsole%2Fretailer%2Fgtin%2Fvalidate%3Fgtin%3D' + GTIN;
+var GTIN = '8908016987457';
+
 function setStatus(state, text) {
   var el = document.getElementById('api-status');
   el.className = 'api-status ' + state;
@@ -485,30 +484,19 @@ function showPanel(id) {
     document.getElementById(s).style.display = s === id ? 'block' : 'none';
   });
 }
-
 function getLang(arr) {
-  // pick en-IN value from [{language, value}] arrays
   if (!arr || !arr.length) return null;
   var en = arr.filter(function(x){ return x.language === 'en-IN'; });
   return (en.length ? en[0] : arr[0]).value;
 }
-
 function renderProduct(d) {
-  // verified / complete
   if (d.gtinRecordStatus === 'OK' || d.isComplete)
     document.getElementById('verified').style.display = 'flex';
-
-  // product image — DataKart does not return image URL in this endpoint
-  // leave the ghee emoji placeholder
-
-  // name & company
   document.getElementById('prod-name').textContent =
     getLang(d.productDescription) || 'Cow Ghee';
   document.getElementById('prod-co').textContent =
     [getLang(d.brandName),
      d.gs1Licence && d.gs1Licence.licenseeName].filter(Boolean).join(' · ');
-
-  // tags
   var tags = document.getElementById('prod-tags');
   function tag(t, c) {
     var s = document.createElement('span');
@@ -518,8 +506,6 @@ function renderProduct(d) {
   if (d.gtinRecordStatus === 'OK') tag('GS1 Verified', 't-green');
   if (d.isComplete) tag('Complete record', 't-green');
   tag('GTIN ' + GTIN, 't-gray');
-
-  // data grid
   var grid = document.getElementById('prod-grid');
   function g(label, value, mono) {
     if (value === null || value === undefined || value === '') return;
@@ -529,7 +515,6 @@ function renderProduct(d) {
       + '<div class="pg-val' + (mono ? ' pg-mono' : '') + '">' + value + '</div>';
     grid.appendChild(div);
   }
-
   var nc = d.netContent && d.netContent.length
     ? d.netContent[0].value + ' ' + d.netContent[0].unitCode : null;
   var country = d.countryOfSaleCode && d.countryOfSaleCode.length
@@ -539,55 +524,28 @@ function renderProduct(d) {
     ? [getLang(addr.addressLocality), getLang(addr.addressRegion),
        addr.postalCode, addr.countryCode].filter(Boolean).join(', ')
     : null;
-
-  g('GTIN-14',       d.gtin,                                          true);
-  g('GTIN-13',       GTIN,                                            true);
+  g('GTIN-14',       d.gtin,                                                        true);
+  g('GTIN-13',       GTIN,                                                          true);
   g('Brand',         getLang(d.brandName));
   g('Product',       getLang(d.productDescription));
   g('Net content',   nc);
-  g('GPC code',      d.gpcCategoryCode,                               true);
+  g('GPC code',      d.gpcCategoryCode,                                             true);
   g('Country',       country);
   g('Licensee',      d.gs1Licence && d.gs1Licence.licenseeName);
-  g('Licensee GLN',  d.gs1Licence && d.gs1Licence.licenseeGLN,       true);
-  g('GCP (licence)', d.gs1Licence && d.gs1Licence.licenceKey,        true);
+  g('Licensee GLN',  d.gs1Licence && d.gs1Licence.licenseeGLN,                     true);
+  g('GCP (licence)', d.gs1Licence && d.gs1Licence.licenceKey,                      true);
   g('Address',       location);
   g('MO',            d.gs1Licence && d.gs1Licence.licensingMO && d.gs1Licence.licensingMO.moName);
   g('Record status', d.gtinRecordStatus);
   g('Date created',  d.dateCreated ? d.dateCreated.slice(0,10) : null);
   g('Date updated',  d.dateUpdated ? d.dateUpdated.slice(0,10) : null);
-
   showPanel('product-loaded');
-  setStatus('success', 'Loaded from GS1 DataKart ✓');
+  setStatus('success', 'GS1 DataKart ✓');
 }
 
-fetch(URL, {
-  method:  'POST',
-  headers: {
-    'Accept':        'application/json',
-    'Content-Type':  'application/json',
-    'Authorization': 'Bearer ' + TOKEN,
-  },
-  mode: 'cors',
-})
-.then(function(r) {
-  console.log('[DataKart] HTTP', r.status);
-  if (!r.ok) throw new Error('HTTP ' + r.status);
-  return r.json();
-})
-.then(function(resp) {
-  console.log('[DataKart] Response:', JSON.stringify(resp).slice(0,300));
-  if (resp.status && resp.data && resp.data.length) {
-    renderProduct(resp.data[0]);
-  } else {
-    showPanel('product-error');
-    setStatus('error', 'No data returned');
-  }
-})
-.catch(function(err) {
-  console.warn('[DataKart] Error:', err.message);
-  showPanel('product-error');
-  setStatus('error', 'API error — static data shown');
-});
+// DataKart data embedded — sourced from GS1 DataKart API 28 Jun 2026
+var staticData = {"gtin":"08908016987457","gtinRecordStatus":"OK","gpcCategoryCode":"10000585","brandName":[{"language":"en-IN","value":"SARAS"}],"productDescription":[{"language":"en-IN","value":"SARAS Cow Ghee 1 Litres"}],"netContent":[{"unitCode":"LTR","value":"1"}],"countryOfSaleCode":[{"numeric":"356","alpha2":"IN","alpha3":"IND"}],"dateCreated":"2022-12-20T13:15:07.8795098Z","dateUpdated":"2023-06-15T14:33:08.4383425Z","gs1Licence":{"licenceKey":"8908016987","licenceType":"GCP","licenseeName":"BHILWARA ZILA DUGDH UTPADAK SAHAKARI SANGH LTD","licenseeGLN":"8906000990018","licensingMO":{"moName":"GS1 India"},"address":{"addressLocality":{"language":"en-IN","value":"Bhilwara"},"countryCode":"IN","postalName":{"language":"en-IN","value":"Bhilwara"},"streetAddress":{"language":"en-IN","value":"5 KM STONE"},"addressRegion":{"language":"en-IN","value":"Rajasthan"},"postalCode":"311001"},"dateCreated":"2021-03-03T06:45:06Z","dateUpdated":"2025-09-12T09:52:05.2089978Z"},"isComplete":true};
+renderProduct(staticData);
 
 function tog(id, btn) {
   var el   = document.getElementById(id);
